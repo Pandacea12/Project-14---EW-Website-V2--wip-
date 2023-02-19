@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+:root {
+    --night-blue: rgb(1, 15, 46);
+    --dark-blue: rgb(17, 27, 84);
+    --dark-cloud: rgb(49, 54, 122);
+    --cloud-blue: rgb(101, 105, 161);
+    --royal-blue: rgb(0, 32, 161);
+    --bright-blue: rgb(0, 51, 255);
+    --light-blue: rgb(43, 86, 255);
+    --ice-blue: rgb(141, 177, 214);
+    --pale-ice: rgb(232, 249, 255);
+    --blue-green-light: rgb(64, 206, 222);
+    --blue-green-dark: rgb(6, 63, 69);
+    --spring-green: rgb(58, 176, 88);
+    --deep-green: rgb(11, 128, 54);
+    --emerald-green: rgb(33, 105, 52);
+    --pastel-pink: rgb(255, 184, 236);
+    --pastel-purple: rgb(223, 184, 255);
+    --pastel-red: rgb(255, 184, 186);
+    --pastel-blue: rgb(184, 229, 255);
+    --pastel-green: rgb(184, 255, 218);
+    --pastel-yellow: rgb(242, 255, 184);
+    --pastel-orange: rgb(255, 233, 184);
+    --deep-pink: rgb(214, 84, 168);
+    --deep-orange: rgb(247, 155, 42);
+    --deep-red: rgb(252, 78, 96);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General Settings */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    background-image: url(./images/daymountains.png);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    overflow-x: hidden;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+/* General Settings End */
+
+
+/* Desktop NavList */
+
+#nav{
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: var(--blue-green-light);
+
+}
+
+#nav .logo-wrap img {
+    position: absolute;
+    left: 5%;
+    top: 0;
+    height: 50px;
+    width: 50px;
+}
+
+#nav ul {
+    width: 33vw;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+}
+
+#nav ul a {
+    display: block;
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition-property: color, background-color ;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+#nav ul a:hover {
+    color: var(--blue-green-light);
+    background-color: white;
+}
+
+#nav ul a.active {
+    color: var(--blue-green-light);
+}
+
+#nav .search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#nav input[type=text] {
+    overflow: hidden;
+    border-radius: 5px;
+    border: 2px solid var(--blue-green-light);
+    font-size: 1.25rem;
+    height: 2rem;
+    background-color: white;
+    color: var(--cloud-blue);
+    max-width: 10rem;
+}
+
+#nav .entersearch {
+    height: 2rem;
+    border-radius: 5px;
+    border: 2px solid var(--blue-green-light);
+    padding: 0 1rem 0 1rem;
+    background-color: transparent;
+    color: white;
+    transition-property: color, background-color ;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    cursor: pointer;
+}
+
+#nav .entersearch:hover {
+    background-color: white;
+    color: var(--blue-green-light);
+}
+
+#nav .nightmode {
+    position: absolute;
+    right: 5%;
+    padding: 0.75rem;
+    background-color: transparent;
+    color: var(--pale-ice);
+    border-radius: 10px;
+    border: 2px solid white;
+    text-transform: uppercase;
+    transition-property: color, background-color ;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    cursor: pointer;
+}
+
+#nav .nightmode:hover {
+    background-color: var(--blue-green-dark);
+    color: var(--ice-blue);
+}
+
+/* Desktop NavList End */
+/* Hello Section General settings*/
+
+#hello {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Hello Section General settings End*/
+/*Desktop Top Slider*/
+
+.dummy-slider {
+    
+    margin: 20vh 9vw 0 9vw;
+    padding: auto;
+    width: 80vw;
+    height: 50vh;
+    background-color: var(--blue-green-light);
+    border-radius: 20px;
+}
+
+/*Desktop Top Slider End*/
+/*Subsections*/
+
+.subsection {
+    margin: 5vh 9vw 0 9vw;
+    padding: auto;
+    width: 80vw;
+    background-color: white;
+    color: var(--blue-green-dark);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ann-band {
+    background-color: var(--blue-green-light);
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+/*Subsections End*/
+
+/* Product settings */
+
+#hello .product-pic {
+    height: 175px;
+    width: 150px;
+    background-color: var(--blue-green-dark);
+    border-radius: 5px;
+}
+
+#hello .products {
+    display: flex;
+    column-gap: 0.5rem;
+    margin: 0.5rem;
+}
+
+/* Product settings end*/
+
+
+
+/* Desktop Footer*/
+
+#footer {
+    position: relative;
+    z-index: 10;
+    bottom: 0;
+    background-color: var(--blue-green-light);
+    width: 100vw;
+}
+
+#footer .logo-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+}
+
+#footer .navbottom {
+    background-color: var(--blue-green-light);
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: right;
+}
+
+#footer .navbottom a {
+    display: block;
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition-property: color, background-color ;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+#footer .navbottom a:hover {
+    color: var(--blue-green-light);
+    background-color: white;
+}
+
+#footer .navbottom a.active {
+    color: var(--blue-green-light);
+}
+
+#footer ul {
+    width: 33vw;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+}
+#footer .social-icon {
+    width: 33vw;
+    display: flex;
+    flex-direction: row;
+}
+
+#footer .copyright-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer .copyright-wrapper .pp-ts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5vw;
+}
+
+#footer .copyright-wrapper .pp-ts a {
+    font-size: 1rem;
+    transition: 0.5s color ease;
+}
+
+#footer .copyright-wrapper .pp-ts a:hover {
+    color: var(--blue-green-dark)
+}
+
+#footer .copyright-wrapper .copyright {
+    margin: 1vh 0 1vh 0;
+
+}
+
+/* Desktop Footer End*/
+
+
+@media screen and (max-width: 991px) {
+    
+    
+} /* Large tablets */
+
+@media screen and (max-width: 767px) {
+
+
+} /* Medium Tablets */
+
+@media screen and (max-width: 479px) {
+
+
+} /* Phone screns */

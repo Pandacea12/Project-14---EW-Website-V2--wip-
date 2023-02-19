@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+:root {
+    --night-blue: rgb(1, 15, 46);
+    --dark-blue: rgb(17, 27, 84);
+    --dark-cloud: rgb(49, 54, 122);
+    --cloud-blue: rgb(101, 105, 161);
+    --royal-blue: rgb(0, 32, 161);
+    --bright-blue: rgb(0, 51, 255);
+    --light-blur: rgb(43, 86, 255);
+    --ice-blue: rgb(141, 177, 214);
+    --pale-ice: rgb(232, 249, 255);
+    --spring-green: rgb(58, 176, 88);
+    --deep-green: rgb(11, 128, 54);
+    --emerald-green: rgb(33, 105, 52);
+    --pastel-pink: rgb(255, 184, 236);
+    --pastel-purple: rgb(223, 184, 255);
+    --pastel-red: rgb(255, 184, 186);
+    --pastel-blue: rgb(184, 229, 255);
+    --pastel-green: rgb(184, 255, 218);
+    --pastel-yellow: rgb(242, 255, 184);
+    --pastel-orange: rgb(255, 233, 184);
+    --deep-pink: rgb(214, 84, 168);
+    --deep-orange: rgb(247, 155, 42);
+    --deep-red: rgb(252, 78, 96);
+}
+
+/* Petals */
+.petal1 {
+    width: 7.5vw;
+    max-width: 75px;
+    height: 7.5vh;
+    max-height: 50px;
+    background: white;
+    border-radius: 60% 60% 10% 60%;
+}
+
+.petal2{
+    height: 7.5vh;
+    max-height: 50px;
+    width: 7.5vw;
+    max-width: 75px;
+    background: white;
+    border-radius: 50% 20% 50% 20%;
+} 
+
+/* Petals End */
+
+/* Petals Position Start */
+
+.wave {
+    position: relative;
+    top: -5vh;
+}
+
+/* Petals Position End */
+
+.wave {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Yellow-Red Fall */
+
+.wave1 {
+    animation: 10s linear infinite fall1;
+}
+
+.wave1 .petal1 {
+    animation: 10s linear infinite spin1;
+}
+
+.wave3 {
+    animation: 10s linear infinite fall1;
+    animation-delay: 3.3s;
+}
+
+.wave3 .petal1 {
+    animation: 10s linear infinite spin1;
+    animation-delay: 1.5s;
+}
+
+.wave5 {
+    animation: 10s linear infinite fall1;
+    animation-delay: 6.6s;
+}
+
+.wave5 .petal1{
+    animation: 10s linear infinite spin1;
+    animation-delay: 3s;
+}
+
+/* Yellow-Red Fall End*/
+
+/* White-blue Fall */
+
+.wave2 {
+    animation: 10s linear infinite fall2;
+    animation-delay: 1.6s;
+}
+
+.wave2 .petal2 {
+    animation: 10s linear infinite spin2;
+    animation-delay: 1.5s;
+}
+
+.wave4 {
+    animation: 10s linear infinite fall2;
+    animation-delay: 4.9s;
+}
+
+.wave4 .petal2 {
+    animation: 10s linear infinite spin2;
+    animation-delay: 3s;
+}
+
+.wave6 {
+    animation: 10s linear infinite fall2;
+    animation-delay: 8.5s;
+}
+
+.wave6 .petal2{
+    animation: 10s linear infinite spin2;
+    animation-delay: 4.5s;
+}
+
+/* White-blue Fall End*/
+
+
+/* Keyframes */
+
+
+@keyframes fall1 {
+    0% {
+      margin-top: -5vh;
+      opacity: 0;
+      margin-left: 5%;
+    }
+    25% {
+        margin-left: 15%;
+        opacity: 0.5;
+      }
+    50% {
+      margin-top: 75vh;
+      opacity: 1;
+      margin-left: -5%;
+    }
+    75% {
+        margin-left: 15%;
+        margin-top: 87vh;
+        opacity: 0.5;
+      }
+    100% {
+      margin-top: 87vh;
+      opacity: 0;
+      margin-left: 5%;
+}}
+
+@keyframes fall2 {
+    0% {
+      margin-top: -5vh;
+      opacity: 0;
+      margin-left: 5%;
+    }
+    25% {
+        margin-left: -5%;
+        opacity: 0.5;
+      }
+    50% {
+      margin-top: 75vh;
+      opacity: 1;
+      margin-left: 15%;
+    }
+    75% {
+        margin-top: 87vh;
+        margin-left: -5%;
+        opacity: 0.5;
+      }
+    100% {
+      margin-top: 87vh;
+      opacity: 0;
+      margin-left: 5%;
+}}
+
+@keyframes spin1 {
+    0% {
+        transform: rotate(0deg);
+        background: white;
+    }
+    25%{
+        background: var(--pale-ice);
+    }
+    50%{
+        background: var(--pastel-blue);
+    }
+    75%{
+        background: var(--pale-ice);
+    }
+    100% {
+        transform: rotate(359deg);
+        background: white;
+    }
+}
+
+@keyframes spin2 {
+    0% {
+        transform: rotate(0deg);
+        background: white;
+    }
+    25%{
+        background: var(--ice-blue);
+    }
+    50%{
+        background: var(--pastel-blue);
+    }
+    75%{
+        background: var(--ice-blue);;
+    }
+    100% {
+        transform: rotate(-359deg);
+        background: white;
+    }
+}
+
+
+
+@media screen and (max-width: 991px) {
+    
+    
+} /* Large tablets */
+
+@media screen and (max-width: 767px) {
+
+
+} /* Medium Tablets */
+
+@media screen and (max-width: 479px) {
+
+
+} /* Phone screns */
